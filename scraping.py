@@ -94,7 +94,7 @@ def mars_facts():
     df.set_index('Description', inplace=True)
     
     # Covert dataframe into HTML format, add bootstrap
-    return df.to_html(classes="table table-striped")
+    return df.to_html(classes="table table-striped table-hover")
 
 # Function to get images of four Mars hemispheres
 def hemispheres(browser):
