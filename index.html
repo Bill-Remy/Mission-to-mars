@@ -9,6 +9,20 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    <style>
+      .button { background-color: red;
+        border: blue;
+        color: white;
+        padding: 20px 34px;
+        text-align: center;
+        font-size: 30px;
+        opacity: 0.6;
+        transition: 0.3s;
+        }
+      .button:hover{opacity: 1;}
+      table tr:nth-child(even){background-color: darkgrey;}
+      table tr:hover {background-color: coral;}
+  </style>  
   </head>
   <body>
     <div class="container">
@@ -16,7 +30,7 @@
       <div class="jumbotron text-center">
         <h1>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <p><a class="button" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
 
       <!-- Add section for Mars News -->
@@ -49,6 +63,7 @@
           <!-- Mars Facts -->
           <div class="row" id="mars-facts">
             <h4>Mars Facts</h4>
+            <p><strong>Earth vs. Mars Comparison</strong></p>
             {{ mars.facts | safe }}
           </div>
         </div>
